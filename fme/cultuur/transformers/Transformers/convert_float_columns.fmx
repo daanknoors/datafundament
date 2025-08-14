@@ -1,0 +1,623 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <TRANSFORMER
+# TRANSFORMER_BEGIN convert_float_columns,2,"""Data Quality""",7093ee97-b907-4832-be89-3dc53f5296d6,"Linked by Default",No,NO_PARALLELISM,,No,25220,YES,No,313,No,
+# 
+# TRANSFORMER_END
+#!   A0_PREVIEW_IMAGE="data:image/png;base64,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"
+#!   ARCGIS_COMPATIBILITY="ARCGIS_AUTO"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BLOCKED_LOOPING="No"
+#!   CATEGORY="&quot;Data Quality&quot;"
+#!   DESCRIPTION=""
+#!   DOC_EXTENTS="3641.54 250.001"
+#!   DOC_TOP_LEFT="-2011.86 -125.001"
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="25220"
+#!   FME_DOCUMENT_GUID="7093ee97-b907-4832-be89-3dc53f5296d6"
+#!   FME_DOCUMENT_PRIORGUID=""
+#!   FME_LINKED_TRANSFORMER_VERSION="2"
+#!   FME_NAMES_ENCODING="UTF-8"
+#!   FME_PROCESS_COUNT="NO_PARALLELISM"
+#!   FME_PROCESS_GROUPS_ORDERED="No"
+#!   FME_PROCESS_GROUP_BY=""
+#!   FME_PROCESS_PRESERVE_GROUP_ATTR="No"
+#!   FME_SERVER_SERVICES=""
+#!   FMX_ATTRIBUTE_PROPOGATION_MODE="AUTO"
+#!   FMX_INSERT_MODE="Linked by Default"
+#!   HISTORY=""
+#!   ITERATION_COUNT_ATTR=""
+#!   LAST_SAVE_BUILD="FME(R) 2025.0.1.0 (20250327 - Build 25220 - WIN64)"
+#!   LAST_SAVE_DATE="2025-07-28T08:19:52"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOOP_ITERATIONS=""
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="313"
+#!   REPLACED_BY=""
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   TITLE="convert_float_columns"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="-2228.15 531.255"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   XFORM_DEPRECATED="No"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI ATTRLIST_COMMAS_ENCODED _FLOAT_COLUMNS &quot;&quot; Float columns"
+#!   DEFAULT_VALUE="aangevraagd_bedrag,vastgesteld_bedrag,verleend_bedrag_of_bedrag_na_herziening_tussentijds"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <USER_PARAMETERS
+#!   FORM="eyJwYXJhbWV0ZXJzIjpbeyJuYW1lIjoiX0ZMT0FUX0NPTFVNTlMiLCJwcm9tcHQiOiJGbG9hdCBjb2x1bW5zIiwidmFsdWVUeXBlIjoic3RyaW5nRW5jb2RlZFBhcnRzIiwiZGVmYXVsdFZhbHVlIjoiYWFuZ2V2cmFhZ2RfYmVkcmFnLHZhc3RnZXN0ZWxkX2JlZHJhZyx2ZXJsZWVuZF9iZWRyYWdfb2ZfYmVkcmFnX25hX2hlcnppZW5pbmdfdHVzc2VudGlqZHMiLCJjaG9pY2VTZXR0aW5ncyI6eyJjaG9pY2VTZXQiOiJhdHRyaWJ1dGVOYW1lcyJ9LCJ0eXBlIjoidHJlZSIsImRlbGltaXRlciI6IiwifV19"
+#! >
+#! <PARAMETER_INFO>
+#!     <INFO NAME="_FLOAT_COLUMNS" 
+#!   DEFAULT_VALUE="aangevraagd_bedrag,vastgesteld_bedrag,verleend_bedrag_of_bedrag_na_herziening_tussentijds"
+#!   SCOPE="DEPENDENT"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI ATTRLIST_COMMAS_ENCODED _FLOAT_COLUMNS &quot;&quot; Float columns"
+#! />
+#! </PARAMETER_INFO>
+#! </USER_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="9"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;hr { height: 1px; border-width: 0; }&#10;li.unchecked::marker { content: &quot;\2610&quot;; }&#10;li.checked::marker { content: &quot;\2612&quot;; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;verwijder euroteken en spatie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-983.77198579695414 125.00031345833054"
+#!   TOP_LEFT="-983.77198579695414 125.00031345833054"
+#!   BOTTOM_RIGHT="-547.78179777007381 124.00031345833054"
+#!   BOUNDING_RECT="-983.77198579695414 125.00031345833054 435.99018802688028 1"
+#!   ORDER="500000000000053"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   UUID="{d2b7b54a-d344-4a0f-8506-e594e85498c4}"
+#!   COLOUR="1,0.95686274509803926,0.80000000000000004,0.90196078431372551"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="4"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="10"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;hr { height: 1px; border-width: 0; }&#10;li.unchecked::marker { content: &quot;\2610&quot;; }&#10;li.checked::marker { content: &quot;\2612&quot;; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;komma omzetten naar punt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-229.79744287833182 125.00031345833077"
+#!   TOP_LEFT="-229.79744287833182 125.00031345833077"
+#!   BOTTOM_RIGHT="206.19274514854845 124.00031345833077"
+#!   BOUNDING_RECT="-229.79744287833182 125.00031345833077 435.99018802688028 1"
+#!   ORDER="500000000000059"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   UUID="{eb257afe-4644-4b9f-95f8-ca5287dcb692}"
+#!   COLOUR="1,0.95686274509803926,0.80000000000000004,0.90196078431372551"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="5"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="4"
+#!   TYPE="StringReplacer"
+#!   VERSION="5"
+#!   POSITION="-1012.9487561063224 -60.000936554169584"
+#!   BOUNDING_RECT="-1012.9487561063224 -60.000936554169584 663.515625 65"
+#!   ORDER="500000000000052"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="25220"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="FIND_TEXT" PARM_VALUE="&lt;openbracket&gt;^0-9&lt;comma&gt;&lt;closebracket&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH" PARM_VALUE="_FME_NO_OP_"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="REPLACE_TEXT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SRC_ATTRS" PARM_VALUE="$(_FLOAT_COLUMNS)"/>
+#!     <XFORM_PARM PARM_NAME="TEST_STRING" PARM_VALUE="Enter a string to test here..."/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringReplacer_verwijder_tekens"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="5"
+#!   TYPE="StringReplacer"
+#!   VERSION="5"
+#!   POSITION="-229.79744287833182 -60.000936554169584"
+#!   BOUNDING_RECT="-229.79744287833182 -60.000936554169584 690.28125 65"
+#!   ORDER="500000000000056"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="25220"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="FIND_TEXT" PARM_VALUE="&lt;comma&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH" PARM_VALUE="_FME_NO_OP_"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="REPLACE_TEXT" PARM_VALUE="."/>
+#!     <XFORM_PARM PARM_NAME="SRC_ATTRS" PARM_VALUE="$(_FLOAT_COLUMNS)"/>
+#!     <XFORM_PARM PARM_NAME="TEST_STRING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringReplacer_Omzetten_komma"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="2"
+#!   NAME="ConvertFloatColumns_output"
+#!   POSITION="897.310627151056 -60.000936554169584"
+#!   BOUNDING_RECT="897.310627151056 -60.000936554169584 732.375 65"
+#!   COLLAPSED="true"
+#!   IS_SOURCE="false"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="3"
+#!   NAME="StringReplacer_verwijder_tekens_Input"
+#!   POSITION="-2011.8550061063224 -60.000936554169584"
+#!   BOUNDING_RECT="-2011.8550061063224 -60.000936554169584 898.90625 65"
+#!   COLLAPSED="true"
+#!   PUBLISHED="true"
+#!   IS_SOURCE="true"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="6"
+#!   SOURCE_NODE="3"
+#!   TARGET_NODE="4"
+#!   SOURCE_PORT_DESC="0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="7"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="8"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="2"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="0"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </TRANSFORMER>
+
+# ============================================================================
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)__FLOAT_COLUMNS aangevraagd_bedrag,vastgesteld_bedrag,verleend_bedrag_of_bedrag_na_herziening_tussentijds
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_DATA_REPOSITORY 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_ENGINE 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_JOB_ID 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SECURITY_ROLES 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SECURITY_USER 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_DEST_DIR 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_HOST 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_PORT 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_REQUEST_HEADERS 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_REQUEST_METHOD 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_REQUEST_PARAMETERS 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_REQUEST_URI 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_RUNTIME_USER 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_RUNTIME_USER_ID 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_WEB_URL 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_BACKUP 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_DASHBOARD 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_DATA 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_ENGINE 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_LOG 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_SYSTEM 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_TEMP 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_TOPIC 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_TOPIC_MESSAGE 
+
+# ============================================================================
+#! START_HEADER
+#! END_HEADER
+
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+DEFAULT_MACRO convert_float_columns_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(convert_float_columns_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(convert_float_columns_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_Input1753690792 Input Splitter"   INPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_Input"   OUTPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_Input"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} StringReplacerFactory    FACTORY_NAME { $(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens }    INPUT  FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_Input"    USE_REGEX { YES }    CASE_SENSITIVE { NO }    SOURCE_ATTRIBUTES { $($(convert_float_columns_WORKSPACE_NAME)__FLOAT_COLUMNS) }    FIND_TEXT { "<openbracket>^0-9<comma><closebracket>" }    REPLACE_TEXT { "" }    REPLACE_NO_MATCH { "_FME_NO_OP_" }    OUTPUT { OUTPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_OUTPUT"          }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} StringReplacerFactory    FACTORY_NAME { $(convert_float_columns_WORKSPACE_NAME)_StringReplacer_Omzetten_komma }    INPUT  FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_OUTPUT"    USE_REGEX { NO }    CASE_SENSITIVE { NO }    SOURCE_ATTRIBUTES { $($(convert_float_columns_WORKSPACE_NAME)__FLOAT_COLUMNS) }    FIND_TEXT { "<comma>" }    REPLACE_TEXT { "." }    REPLACE_NO_MATCH { "_FME_NO_OP_" }    OUTPUT { OUTPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_Omzetten_komma_OUTPUT"          }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(convert_float_columns_WORKSPACE_NAME)_ConvertFloatColumns_output1753690792 Output Collector"   INPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_Omzetten_komma_OUTPUT"   OUTPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_ConvertFloatColumns_output"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(convert_float_columns_WORKSPACE_NAME))}]
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <TRANSFORMER
+# TRANSFORMER_BEGIN convert_float_columns,1,"""Data Quality""",1f87dff2-dc4a-42f7-abaa-6058153a80a5,"Linked by Default",No,NO_PARALLELISM,,No,25220,YES,No,,No,
+# 
+# TRANSFORMER_END
+#!   A0_PREVIEW_IMAGE="data:image/png;base64,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"
+#!   ARCGIS_COMPATIBILITY="ARCGIS_AUTO"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BLOCKED_LOOPING="No"
+#!   CATEGORY="&quot;Data Quality&quot;"
+#!   DESCRIPTION=""
+#!   DOC_EXTENTS="3641.54 250.001"
+#!   DOC_TOP_LEFT="-2011.86 -125.001"
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="25220"
+#!   FME_DOCUMENT_GUID="1f87dff2-dc4a-42f7-abaa-6058153a80a5"
+#!   FME_DOCUMENT_PRIORGUID=""
+#!   FME_LINKED_TRANSFORMER_VERSION="1"
+#!   FME_NAMES_ENCODING="UTF-8"
+#!   FME_PROCESS_COUNT="NO_PARALLELISM"
+#!   FME_PROCESS_GROUPS_ORDERED="No"
+#!   FME_PROCESS_GROUP_BY=""
+#!   FME_PROCESS_PRESERVE_GROUP_ATTR="No"
+#!   FME_SERVER_SERVICES=""
+#!   FMX_ATTRIBUTE_PROPOGATION_MODE="AUTO"
+#!   FMX_INSERT_MODE="Linked by Default"
+#!   HISTORY=""
+#!   ITERATION_COUNT_ATTR=""
+#!   LAST_SAVE_BUILD="FME(R) 2025.0.1.0 (20250327 - Build 25220 - WIN64)"
+#!   LAST_SAVE_DATE="2025-07-28T08:05:48"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOOP_ITERATIONS=""
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY=""
+#!   REPLACED_BY=""
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   TITLE="convert_float_columns"
+#!   USAGE=""
+#!   USE_MARKDOWN="NO"
+#!   VIEW_POSITION="-1131.26 296.878"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   XFORM_DEPRECATED="No"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI ATTRLIST_COMMAS_ENCODED _FLOAT_COLUMNS &quot;&quot; Float columns"
+#!   DEFAULT_VALUE="aangevraagd_bedrag,vastgesteld_bedrag,verleend_bedrag_of_bedrag_na_herziening_tussentijds"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <USER_PARAMETERS
+#!   FORM="eyJwYXJhbWV0ZXJzIjpbeyJuYW1lIjoiX0ZMT0FUX0NPTFVNTlMiLCJwcm9tcHQiOiJGbG9hdCBjb2x1bW5zIiwidmFsdWVUeXBlIjoic3RyaW5nRW5jb2RlZFBhcnRzIiwiZGVmYXVsdFZhbHVlIjoiYWFuZ2V2cmFhZ2RfYmVkcmFnLHZhc3RnZXN0ZWxkX2JlZHJhZyx2ZXJsZWVuZF9iZWRyYWdfb2ZfYmVkcmFnX25hX2hlcnppZW5pbmdfdHVzc2VudGlqZHMiLCJjaG9pY2VTZXR0aW5ncyI6eyJjaG9pY2VTZXQiOiJhdHRyaWJ1dGVOYW1lcyJ9LCJ0eXBlIjoidHJlZSIsImRlbGltaXRlciI6IiwifV19"
+#! >
+#! <PARAMETER_INFO>
+#!     <INFO NAME="_FLOAT_COLUMNS" 
+#!   DEFAULT_VALUE="aangevraagd_bedrag,vastgesteld_bedrag,verleend_bedrag_of_bedrag_na_herziening_tussentijds"
+#!   SCOPE="DEPENDENT"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI ATTRLIST_COMMAS_ENCODED _FLOAT_COLUMNS &quot;&quot; Float columns"
+#! />
+#! </PARAMETER_INFO>
+#! </USER_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="9"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;hr { height: 1px; border-width: 0; }&#10;li.unchecked::marker { content: &quot;\2610&quot;; }&#10;li.checked::marker { content: &quot;\2612&quot;; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;euroteken en spatie&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-983.77198579695414 112.50018845708155"
+#!   TOP_LEFT="-983.77198579695414 112.50018845708155"
+#!   BOTTOM_RIGHT="-547.78179777007381 111.50018845708155"
+#!   BOUNDING_RECT="-983.77198579695414 112.50018845708155 435.99018802688028 1"
+#!   ORDER="500000000000053"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   UUID="{d2b7b54a-d344-4a0f-8506-e594e85498c4}"
+#!   COLOUR="1,0.95686274509803926,0.80000000000000004,0.90196078431372551"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="4"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="10"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;hr { height: 1px; border-width: 0; }&#10;li.unchecked::marker { content: &quot;\2610&quot;; }&#10;li.checked::marker { content: &quot;\2612&quot;; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Segoe UI&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;komma omzetten naar punt&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-229.79744287833182 125.00031345833077"
+#!   TOP_LEFT="-229.79744287833182 125.00031345833077"
+#!   BOTTOM_RIGHT="206.19274514854845 124.00031345833077"
+#!   BOUNDING_RECT="-229.79744287833182 125.00031345833077 435.99018802688028 1"
+#!   ORDER="500000000000059"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   UUID="{eb257afe-4644-4b9f-95f8-ca5287dcb692}"
+#!   COLOUR="1,0.95686274509803926,0.80000000000000004,0.90196078431372551"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="5"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="4"
+#!   TYPE="StringReplacer"
+#!   VERSION="5"
+#!   POSITION="-1012.9487561063224 -60.000936554169584"
+#!   BOUNDING_RECT="-1012.9487561063224 -60.000936554169584 663.515625 65"
+#!   ORDER="500000000000052"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="25220"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="FIND_TEXT" PARM_VALUE="&lt;openbracket&gt;^0-9&lt;comma&gt;&lt;closebracket&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH" PARM_VALUE="_FME_NO_OP_"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="REPLACE_TEXT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SRC_ATTRS" PARM_VALUE="$(_FLOAT_COLUMNS)"/>
+#!     <XFORM_PARM PARM_NAME="TEST_STRING" PARM_VALUE="Enter a string to test here..."/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringReplacer_verwijder_tekens"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="5"
+#!   TYPE="StringReplacer"
+#!   VERSION="5"
+#!   POSITION="-229.79744287833182 -60.000936554169584"
+#!   BOUNDING_RECT="-229.79744287833182 -60.000936554169584 690.28125 65"
+#!   ORDER="500000000000056"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="25220"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_PARM PARM_NAME="CASE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="FIND_TEXT" PARM_VALUE="&lt;comma&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH" PARM_VALUE="_FME_NO_OP_"/>
+#!     <XFORM_PARM PARM_NAME="NO_MATCH_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="REGEXP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="REPLACE_TEXT" PARM_VALUE="."/>
+#!     <XFORM_PARM PARM_NAME="SRC_ATTRS" PARM_VALUE="$(_FLOAT_COLUMNS)"/>
+#!     <XFORM_PARM PARM_NAME="TEST_STRING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringReplacer_Omzetten_komma"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="2"
+#!   NAME="ConvertFloatColumns_output"
+#!   POSITION="897.310627151056 -60.000936554169584"
+#!   BOUNDING_RECT="897.310627151056 -60.000936554169584 732.375 65"
+#!   COLLAPSED="true"
+#!   IS_SOURCE="false"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="3"
+#!   NAME="StringReplacer_verwijder_tekens_Input"
+#!   POSITION="-2011.8550061063224 -60.000936554169584"
+#!   BOUNDING_RECT="-2011.8550061063224 -60.000936554169584 898.90625 65"
+#!   COLLAPSED="true"
+#!   PUBLISHED="true"
+#!   IS_SOURCE="true"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="6"
+#!   SOURCE_NODE="3"
+#!   TARGET_NODE="4"
+#!   SOURCE_PORT_DESC="0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="7"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="8"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="2"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="0"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </TRANSFORMER>
+
+# ============================================================================
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)__FLOAT_COLUMNS aangevraagd_bedrag,vastgesteld_bedrag,verleend_bedrag_of_bedrag_na_herziening_tussentijds
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_DATA_REPOSITORY 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_ENGINE 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_JOB_ID 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SECURITY_ROLES 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SECURITY_USER 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_DEST_DIR 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_HOST 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_PORT 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_REQUEST_HEADERS 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_REQUEST_METHOD 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_REQUEST_PARAMETERS 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_REQUEST_URI 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_RUNTIME_USER 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_RUNTIME_USER_ID 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SERVER_WEB_URL 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_BACKUP 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_DASHBOARD 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_DATA 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_ENGINE 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_LOG 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_SYSTEM 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_SHAREDRESOURCE_TEMP 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_TOPIC 
+
+DEFAULT_MACRO $(convert_float_columns_WORKSPACE_NAME)_FME_TOPIC_MESSAGE 
+
+# ============================================================================
+#! START_HEADER
+#! END_HEADER
+
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+DEFAULT_MACRO convert_float_columns_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(convert_float_columns_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(convert_float_columns_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_Input1753689948 Input Splitter"   INPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_Input"   OUTPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_Input"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} StringReplacerFactory    FACTORY_NAME { $(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens }    INPUT  FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_Input"    USE_REGEX { YES }    CASE_SENSITIVE { NO }    SOURCE_ATTRIBUTES { $($(convert_float_columns_WORKSPACE_NAME)__FLOAT_COLUMNS) }    FIND_TEXT { "<openbracket>^0-9<comma><closebracket>" }    REPLACE_TEXT { "" }    REPLACE_NO_MATCH { "_FME_NO_OP_" }    OUTPUT { OUTPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_OUTPUT"          }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} StringReplacerFactory    FACTORY_NAME { $(convert_float_columns_WORKSPACE_NAME)_StringReplacer_Omzetten_komma }    INPUT  FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_verwijder_tekens_OUTPUT"    USE_REGEX { NO }    CASE_SENSITIVE { NO }    SOURCE_ATTRIBUTES { $($(convert_float_columns_WORKSPACE_NAME)__FLOAT_COLUMNS) }    FIND_TEXT { "<comma>" }    REPLACE_TEXT { "." }    REPLACE_NO_MATCH { "_FME_NO_OP_" }    OUTPUT { OUTPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_Omzetten_komma_OUTPUT"          }
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(convert_float_columns_WORKSPACE_NAME)_ConvertFloatColumns_output1753689948 Output Collector"   INPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_StringReplacer_Omzetten_komma_OUTPUT"   OUTPUT FEATURE_TYPE "$(convert_float_columns_WORKSPACE_NAME)_ConvertFloatColumns_output"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(convert_float_columns_WORKSPACE_NAME))}]
+

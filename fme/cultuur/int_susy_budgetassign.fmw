@@ -1,0 +1,1068 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command line to run this workspace:
+#        "C:\Program Files\FME\fme.exe" D:\Projecten\cultuur_integratie\int_susy_budgetassign.fmw
+#          --_meta_privacy "geen_persoonsgegevens"
+#          --_Azure_Container "raw"
+#          --_Azure_Folder "staging/Susy/"
+#          --DestDataset_MSSQL_AZURE_5 "Microsoft<space>Azure<space>SQL<space>server<space>df"
+#          --FME_LAUNCH_VIEWER_APP "YES"
+#    
+#!   A0_PREVIEW_IMAGE="data:image/png;base64,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"
+#!   ARCGIS_COMPATIBILITY="ARCGIS_AUTO"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="5936.23 517.017"
+#!   DOC_TOP_LEFT="626.655 -149.997"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="25220"
+#!   FME_BULK_MODE_THRESHOLD="2000"
+#!   FME_DOCUMENT_GUID="25cb4f68-517d-4837-b19c-a31be351450d"
+#!   FME_DOCUMENT_PRIORGUID="0edb98ed-aef9-4891-be02-b07839c2060a,2348a07e-347b-4454-a4e3-34d2088218c0,1e5dd2a0-6d3b-415d-8bcd-2abe19ffe9d1,083c8dbf-3fac-4551-b7d8-fe75a661c3b0,44c11674-f2e5-42b9-a2b6-91755ef5970b,6461c3cb-c61b-4e12-b32d-5d1e9c60b4ba,51332511-4a30-46a1-8acd-547528342379,92ebafdf-ad6e-4f34-a6f3-19c092ca8b7d,34a5727b-51e0-4a3f-96fd-f665ad664bf0,c2af0c9b-a97f-4cb5-99dc-13abc81150e2,337fd0f6-3140-4d15-b691-b199f5a00b73,6939b5bd-2c57-46a6-8a75-8debf53fe977,f50e4f9c-3b9e-4b8c-8f94-d684da6a42a0,03223e51-17e9-4e6d-bdcc-c55ad8ee70f0,d96c08d2-72a8-4f3d-b163-9b95ce77632c,ced32b89-d8f1-421c-adfd-13b3247f3b10,db7ca277-abda-4d2a-af95-c87f58239489,5e032047-7c78-452e-aad6-c8fc6be1afbf,2fcc6119-6809-4f8a-a7a1-a14aac8cb1e3,297d1b26-a210-49de-bb62-24478f3b0f4a"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_NAMES_ENCODING="UTF-8"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2025.0.1.0 (20250327 - Build 25220 - WIN64)"
+#!   LAST_SAVE_DATE="2025-07-28T09:42:09"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="313"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="Yes"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="NO"
+#!   TITLE=""
+#!   USAGE=""
+#!   USE_MARKDOWN=""
+#!   VIEW_POSITION="3745.7 572.922"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="72"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="MSSQL_AZURE"
+#!   DATASET="$(DestDataset_MSSQL_AZURE_5)"
+#!   KEYWORD="MSSQL_AZURE_4"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="128"
+#!   ATTR_CASE="ANY"
+#!   FEATURE_TYPE_CASE="ANY"
+#!   FEATURE_TYPE_LENGTH="128"
+#!   FEATURE_TYPE_INVALID_CHARS="\\&quot;[]"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="mssql_update_key_columns &quot;&quot; mssql_drop_table &quot;&quot; mssql_truncate_table &quot;&quot; mssql_table_writer_mode &quot;&quot; fme_feature_operation INSERT fme_table_handling CREATE_IF_MISSING fme_selection_method MATCH_COLUMNS fme_match_columns &quot;&quot; fme_where_builder_clause &quot;&quot; mssql_enable_identity_insert NO"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="db_type char(254) fme_basename char(50) fme_color char(50) fme_dataset char(50) fme_db_operation char(16) fme_db_transaction char(16) fme_feature_type char(50) fme_fill_color char(50) fme_geometry char(50) fme_primary_axis float fme_rotation float fme_secondary_axis float fme_start_angle float fme_sweep_angle float fme_text_size float fme_text_string char(50) fme_type char(50)"
+#!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP fme_configuration_group fme_configuration_common_group%fme_spatial_group%fme_advanced_group%oracle_advanced_group Table&quot; &quot;&quot; &quot;GUI OPTIONAL NAMEDGROUP fme_configuration_common_group fme_feature_operation%fme_table_handling%mie_pack%oracle_model%fme_update_geometry%fme_selection_group%fme_table_creation_group General&quot; &quot;&quot; &quot;GUI ACTIVECHOICE_LOOKUP fme_feature_operation Insert,INSERT,fme_update_geometry,fme_selection_group,mie_pack%Update,UPDATE,++fme_table_handling+USE_EXISTING,++fme_selection_group+FME_DISCLOSURE_OPEN%Upsert,UPSERT,fme_where_builder_clause,++fme_table_handling+USE_EXISTING,++fme_selection_group+FME_DISCLOSURE_OPEN%Delete,DELETE,++fme_table_handling+USE_EXISTING,fme_update_geometry,++fme_selection_group+FME_DISCLOSURE_OPEN,fme_spatial_group,fme_advanced_group,oracle_sequenced_cols%&lt;at&gt;Value&lt;openparen&gt;fme_db_operation&lt;closeparen&gt;,MULTIPLE,++fme_table_handling+USE_EXISTING,++fme_selection_group+FME_DISCLOSURE_OPEN Feature Operation&quot; INSERT &quot;GUI ACTIVECHOICE_LOOKUP fme_table_handling Use&lt;space&gt;Existing,USE_EXISTING,fme_table_creation_group%Create&lt;space&gt;If&lt;space&gt;Needed,CREATE_IF_MISSING%Drop&lt;space&gt;and&lt;space&gt;Create,DROP_CREATE%Truncate&lt;space&gt;Existing,TRUNCATE_EXISTING,fme_table_creation_group Table Handling&quot; CREATE_IF_MISSING &quot;GUI OPTIONAL DISCLOSUREGROUP fme_selection_group fme_selection_method Row Selection&quot; &quot;&quot; &quot;GUI OPTIONAL WHOLE_LINE RADIOPARAMETERGROUP fme_selection_method fme_match_columns,MATCH_COLUMNS%fme_where_builder_clause,BUILDER Row Selection Method&quot; MATCH_COLUMNS &quot;GUI WHOLE_LINE ATTRLIST_COMMAS fme_match_columns \&quot; \&quot; Match Columns&quot; &quot;&quot; &quot;GUI WHOLE_LINE TEXT_EDIT_SQL_CFG_OR_ATTR fme_where_builder_clause MODE,WHERE WHERE Clause&quot; &quot;&quot; &quot;GUI OPTIONAL DISCLOSUREGROUP fme_advanced_group mssql_enable_identity_insert Advanced&quot; &quot;&quot; &quot;GUI CHOICE mssql_enable_identity_insert NO%YES Insert Into Identity Column&quot; NO "
+#!   ATTR_INDEX_TYPES="Indexed IndexedNotNull Unique UniqueClustered Clustered ClusteredNotNull NotNull PrimaryKey"
+#!   ATTR_NAME_INVALID_CHARS="\\[]&quot;"
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="DATABASE"
+#!   FTTR_TYPE=""
+#!   GENERATE_FME_BUILD_NUM="25220"
+#!   COORDSYS=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="MSSQL_AZURE_IN_READ_CACHE_SIZE MSSQL_AZURE_IN_BEGIN_SQL{0} MSSQL_AZURE_IN_END_SQL{0} MSSQL_AZURE_OUT_BULK_INSERT MSSQL_AZURE_OUT_TRANSACTION_INTERVAL MSSQL_AZURE_OUT_BEGIN_SQL{0} MSSQL_AZURE_OUT_END_SQL{0}"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE_ATTRS"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="Table1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Table"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="NETWORK_AUTHENTICATION"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="NETWORK_PROXY"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="PARAMS_TO_NOT_PROPAGATE_ON_INSPECT"
+#!   VALUE="BEGIN_SQL{0} END_SQL{0}"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="bit"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="varchar_max"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="text"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="varchar_max"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="varbinary_max"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="image"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="nvarchar_max"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="ntext"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="uniqueidentifier"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="timestamp"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="tinyint"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="smallint"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="smallint"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="integer"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="bigint"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="bigint"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="identity"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="binary(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="nchar(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="datetime2"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="datetime2(width)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="datetimeoffset(width)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="datetime"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="smalldatetime"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="time"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="time(width)"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="numeric(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="numeric(20,0)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="real"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="money"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="smallmoney"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="varchar(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="nvarchar(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="varbinary(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="db_none"
+#!   FME_TYPE="fme_voxel_grid"
+#!   FORMAT="MSSQL_AZURE"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="budgetassign"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER="int"
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="5"
+#!   POSITION="6048.6424946227517 236.49928370317963"
+#!   BOUNDING_RECT="6048.6424946227517 236.49928370317963 500.890625 65"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="false"
+#!   KEYWORD="MSSQL_AZURE_4"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   FEAT_GEOMTYPE=""
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_GEOMETRY NAME="" TYPE="" SPATIAL_TYPE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="aanvraagnummer" ATTR_TYPE="varchar(9)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="boekjaar" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="budget_boekjaren" ATTR_TYPE="varchar(11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="budgetbedrag" ATTR_TYPE="varchar(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="budgetid" ATTR_TYPE="varchar(24)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="budgetnaam" ATTR_TYPE="varchar(277)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="doelstelling" ATTR_TYPE="varchar(25)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="naam_wbs" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="nummer_wbs" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="sharepoint_nummer" ATTR_TYPE="varchar(12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="vastgesteld" ATTR_TYPE="varchar(12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="vergadering_dossier_nummer" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="verleend" ATTR_TYPE="varchar(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="hash_key" ATTR_TYPE="char(16),PrimaryKey" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="fme_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="fme_configuration_common_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="fme_configuration_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="fme_feature_operation" PARM_VALUE="INSERT"/>
+#!     <DEFLINE_PARM PARM_NAME="fme_match_columns" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="fme_selection_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="fme_selection_method" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="fme_table_handling" PARM_VALUE="DROP_CREATE"/>
+#!     <DEFLINE_PARM PARM_NAME="fme_where_builder_clause" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="mssql_enable_identity_insert" PARM_VALUE="NO"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <CONNECTIONS>
+#! <CONNECTION
+#!   NAME="Microsoft Azure SQL server df"
+#!   TYPE="DATABASE"
+#!   FAMILY="Microsoft Azure SQL Database"
+#!   USAGE="PUBLISHED"
+#! />
+#! </CONNECTIONS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI CHOICE_OR_ATTR _meta_privacy geen_persoonsgegevens%bijzondere_persoonsgegevens%gevoelige_persoonsgegevens%algemene_persoonsgegevens%geen_persoonsgegevens_maar_wel_via_relatie privacy"
+#!   DEFAULT_VALUE="geen_persoonsgegevens"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING _Azure_Container Container input bestand(en)"
+#!   DEFAULT_VALUE="raw"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING _Azure_Folder Pad naar input bestand(en) in Azure"
+#!   DEFAULT_VALUE="staging/Susy/"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI NAMED_DB_CONNECTION_ENCODED DestDataset_MSSQL_AZURE_5 FMT:MSSQL_AZURE%FAMILY:Microsoft&lt;space&gt;Azure&lt;space&gt;SQL&lt;space&gt;Database Connection:"
+#!   DEFAULT_VALUE="Microsoft&lt;space&gt;Azure&lt;space&gt;SQL&lt;space&gt;server&lt;space&gt;df"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <USER_PARAMETERS
+#!   FORM="eyJwYXJhbWV0ZXJzIjpbeyJuYW1lIjoiX21ldGFfcHJpdmFjeSIsInByb21wdCI6InByaXZhY3kiLCJ2YWx1ZVR5cGUiOiJzdHJpbmciLCJkZWZhdWx0VmFsdWUiOiJnZWVuX3BlcnNvb25zZ2VnZXZlbnMiLCJzdXBwb3J0ZWRWYWx1ZVR5cGVzIjpbImV4cHJlc3Npb24iLCJnbG9iYWxQYXJhbWV0ZXIiXSwiY2hvaWNlU2V0dGluZ3MiOnsic29ydCI6Im5hdHVyYWxTb3J0IiwiY2hvaWNlcyI6W3sgImRpc3BsYXkiIDogImdlZW5fcGVyc29vbnNnZWdldmVucyIsICJ2YWx1ZSIgOiAiZ2Vlbl9wZXJzb29uc2dlZ2V2ZW5zIiB9LHsgImRpc3BsYXkiIDogImJpanpvbmRlcmVfcGVyc29vbnNnZWdldmVucyIsICJ2YWx1ZSIgOiAiYmlqem9uZGVyZV9wZXJzb29uc2dlZ2V2ZW5zIiB9LHsgImRpc3BsYXkiIDogImdldm9lbGlnZV9wZXJzb29uc2dlZ2V2ZW5zIiwgInZhbHVlIiA6ICJnZXZvZWxpZ2VfcGVyc29vbnNnZWdldmVucyIgfSx7ICJkaXNwbGF5IiA6ICJhbGdlbWVuZV9wZXJzb29uc2dlZ2V2ZW5zIiwgInZhbHVlIiA6ICJhbGdlbWVuZV9wZXJzb29uc2dlZ2V2ZW5zIiB9LHsgImRpc3BsYXkiIDogImdlZW5fcGVyc29vbnNnZWdldmVuc19tYWFyX3dlbF92aWFfcmVsYXRpZSIsICJ2YWx1ZSIgOiAiZ2Vlbl9wZXJzb29uc2dlZ2V2ZW5zX21hYXJfd2VsX3ZpYV9yZWxhdGllIiB9XSwiY2hvaWNlU2V0IjoidXNlckRlZmluZWQifSwidHlwZSI6ImRyb3Bkb3duIn0seyJuYW1lIjoiX0F6dXJlX0NvbnRhaW5lciIsInByb21wdCI6IkNvbnRhaW5lciBpbnB1dCBiZXN0YW5kKGVuKSIsInZhbHVlVHlwZSI6InN0cmluZyIsImRlZmF1bHRWYWx1ZSI6InJhdyIsInR5cGUiOiJ0ZXh0Iiwic2hvd0VkaXRCdXR0b24iOmZhbHNlfSx7Im5hbWUiOiJfQXp1cmVfRm9sZGVyIiwicHJvbXB0IjoiUGFkIG5hYXIgaW5wdXQgYmVzdGFuZChlbikgaW4gQXp1cmUiLCJ2YWx1ZVR5cGUiOiJzdHJpbmciLCJkZWZhdWx0VmFsdWUiOiJzdGFnaW5nL1N1c3kvIiwidHlwZSI6InRleHQiLCJzaG93RWRpdEJ1dHRvbiI6ZmFsc2V9LHsibmFtZSI6IkRlc3REYXRhc2V0X01TU1FMX0FaVVJFXzUiLCJwcm9tcHQiOiJDb25uZWN0aW9uOiIsInZhbHVlVHlwZSI6InN0cmluZ0VuY29kZWQiLCJkZWZhdWx0VmFsdWUiOiJNaWNyb3NvZnQ8c3BhY2U+QXp1cmU8c3BhY2U+U1FMPHNwYWNlPnNlcnZlcjxzcGFjZT5kZiIsImNob2ljZVNldHRpbmdzIjp7ImNob2ljZVNldCI6ImRiQ29ubmVjdGlvbnMiLCJmYW1pbHkiOiJNaWNyb3NvZnQgQXp1cmUgU1FMIERhdGFiYXNlIiwiZm9ybWF0IjoiTVNTUUxfQVpVUkUifSwidHlwZSI6ImRyb3Bkb3duIn1dfQ=="
+#! >
+#! <PARAMETER_INFO>
+#!     <INFO NAME="_meta_privacy" 
+#!   DEFAULT_VALUE="geen_persoonsgegevens"
+#!   SCOPE="STAND_ALONE"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI CHOICE_OR_ATTR _meta_privacy geen_persoonsgegevens%bijzondere_persoonsgegevens%gevoelige_persoonsgegevens%algemene_persoonsgegevens%geen_persoonsgegevens_maar_wel_via_relatie privacy"
+#! />
+#!     <INFO NAME="_Azure_Container" 
+#!   DEFAULT_VALUE="raw"
+#!   SCOPE="STAND_ALONE"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI STRING _Azure_Container Container input bestand(en)"
+#! />
+#!     <INFO NAME="_Azure_Folder" 
+#!   DEFAULT_VALUE="staging/Susy/"
+#!   SCOPE="STAND_ALONE"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI STRING _Azure_Folder Pad naar input bestand(en) in Azure"
+#! />
+#!     <INFO NAME="DestDataset_MSSQL_AZURE_5" 
+#!   DEFAULT_VALUE="Microsoft&lt;space&gt;Azure&lt;space&gt;SQL&lt;space&gt;server&lt;space&gt;df"
+#!   SCOPE="DEPENDENT"
+#!   GENERATED_GUI_LINE="true"
+#!   GUI_LINE="GUI NAMED_DB_CONNECTION_ENCODED DestDataset_MSSQL_AZURE_5 FMT:MSSQL_AZURE%FAMILY:Microsoft&lt;space&gt;Azure&lt;space&gt;SQL&lt;space&gt;Database Connection:"
+#! />
+#! </PARAMETER_INFO>
+#! </USER_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="65"
+#!   NAME="BudgetAssign"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="626.65503531678223 367.01976759049154"
+#!   ORDER="500000000000332.13"
+#!   PALETTE_COLOR="Workflow7"
+#!   BOTTOM_RIGHT="6562.8827262302866 -149.99681170892876"
+#!   BOUNDING_RECT="626.65503531678223 367.01976759049154 5936.2276909135044 517.0165792994203"
+#!   STICKY="true"
+#!   COLOUR="0.82745098039215681,0.7803921568627451,0.74901960784313726,1"
+#!   CONTENTS="51 53 5 28 34 55 26 66 52 54 30 27 25 29 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="66"
+#!   NAME="Add hash identifier and remove duplicates"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="4678.8439107173572 236.49928370317963"
+#!   ORDER="500000000000332.25"
+#!   PALETTE_COLOR="Workflow3"
+#!   BOTTOM_RIGHT="5964.7463415355487 -128.50071629682037"
+#!   BOUNDING_RECT="4678.8439107173572 236.49928370317963 1285.902430818192 365"
+#!   STICKY="true"
+#!   COLOUR="0.67843137254901964,0.88235294117647056,0.92156862745098034,1"
+#!   CONTENTS="54 30 29 "
+#! >
+#! </BOOKMARK>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="25"
+#!   TYPE="AttributeExposer"
+#!   VERSION="2"
+#!   POSITION="1479.4510703448609 277.01976759049199"
+#!   BOUNDING_RECT="1479.4510703448609 277.01976759049199 436 65"
+#!   ORDER="500000000000035"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="25220"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Aanvraagnummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Boekjaar" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Budget boekjaren" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Budgetbedrag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BudgetId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Budgetnaam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="csv_line_number" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="csv_number_of_fields" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="csv_total_number_of_columns" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="csv_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Doelstelling" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Naam WBS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Nummer WBS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="SharePoint nummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Vastgesteld" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Vergadering dossier nummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Verleend" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTR_LIST_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="Aanvraagnummer,varchar&lt;openparen&gt;9&lt;closeparen&gt;,Boekjaar,varchar&lt;openparen&gt;200&lt;closeparen&gt;,&quot;Budget boekjaren&quot;,varchar&lt;openparen&gt;11&lt;closeparen&gt;,Budgetbedrag,varchar&lt;openparen&gt;13&lt;closeparen&gt;,BudgetId,varchar&lt;openparen&gt;24&lt;closeparen&gt;,Budgetnaam,varchar&lt;openparen&gt;277&lt;closeparen&gt;,csv_line_number,uint16,csv_number_of_fields,uint8,csv_total_number_of_columns,uint8,csv_type,varchar&lt;openparen&gt;8&lt;closeparen&gt;,Doelstelling,varchar&lt;openparen&gt;25&lt;closeparen&gt;,&quot;Naam WBS&quot;,varchar&lt;openparen&gt;200&lt;closeparen&gt;,&quot;Nummer WBS&quot;,varchar&lt;openparen&gt;200&lt;closeparen&gt;,&quot;SharePoint nummer&quot;,varchar&lt;openparen&gt;12&lt;closeparen&gt;,Vastgesteld,varchar&lt;openparen&gt;12&lt;closeparen&gt;,&quot;Vergadering dossier nummer&quot;,varchar&lt;openparen&gt;200&lt;closeparen&gt;,Verleend,varchar&lt;openparen&gt;13&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeExposer_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="26"
+#!   TYPE="load_csv_from_blob"
+#!   VERSION="2"
+#!   POSITION="676.65503531678223 217.01976759049199"
+#!   BOUNDING_RECT="676.65503531678223 217.01976759049199 447.59375 65"
+#!   ORDER="500000000000328.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="25220"
+#! >
+#!     <OUTPUT_FEAT NAME="Load_CSV_Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Load_csv_file_budget_2"/>
+#!     <XFORM_PARM PARM_NAME="_FME_AZURE_CONTAINER" PARM_VALUE="$(_Azure_Container)"/>
+#!     <XFORM_PARM PARM_NAME="_FME_Azure_Folder" PARM_VALUE="$(_Azure_Folder)"/>
+#!     <XFORM_PARM PARM_NAME="_Filename" PARM_VALUE="budgetAssign.csv"/>
+#!     <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="27"
+#!   TYPE="clean_column_names"
+#!   VERSION="2"
+#!   POSITION="2369.3802959027212 104.1714168847621"
+#!   BOUNDING_RECT="2369.3802959027212 104.1714168847621 883.46875 65"
+#!   ORDER="500000000000329.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="25220"
+#! >
+#!     <OUTPUT_FEAT NAME="only_retain_letters_number_underscores_Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="aanvraagnummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="boekjaar" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budget_boekjaren" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetbedrag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetnaam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="doelstelling" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam_wbs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="nummer_wbs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="sharepoint_nummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vastgesteld" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vergadering_dossier_nummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="verleend" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Clean_column_names_4"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="28"
+#!   TYPE="convert_float_columns"
+#!   VERSION="2"
+#!   POSITION="3782.264154822954 177.58730258791644"
+#!   BOUNDING_RECT="3782.264154822954 177.58730258791644 721.046875 65"
+#!   ORDER="500000000000331.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="25220"
+#! >
+#!     <OUTPUT_FEAT NAME="ConvertFloatColumns_output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="aanvraagnummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="boekjaar" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budget_boekjaren" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetbedrag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetnaam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="doelstelling" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam_wbs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="nummer_wbs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="sharepoint_nummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vastgesteld" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vergadering_dossier_nummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="verleend" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Convert_float_columns_3"/>
+#!     <XFORM_PARM PARM_NAME="_FLOAT_COLUMNS" PARM_VALUE="budgetbedrag"/>
+#!     <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="29"
+#!   TYPE="CRCCalculator"
+#!   VERSION="4"
+#!   POSITION="4728.8439107173572 146.49928370317963"
+#!   BOUNDING_RECT="4728.8439107173572 146.49928370317963 436 65"
+#!   ORDER="500000000000316.13"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="25220"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="aanvraagnummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="boekjaar" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budget_boekjaren" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetbedrag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetnaam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="doelstelling" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam_wbs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="nummer_wbs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="sharepoint_nummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vastgesteld" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vergadering_dossier_nummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="verleend" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hash_key" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="aanvraagnummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="boekjaar" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="budget_boekjaren" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="budgetbedrag" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="budgetid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="budgetnaam" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="doelstelling" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="naam_wbs" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="nummer_wbs" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="sharepoint_nummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="vastgesteld" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="vergadering_dossier_nummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="verleend" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ALG_TYPE" PARM_VALUE="MD5"/>
+#!     <XFORM_PARM PARM_NAME="CALC_ATTRS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CRC_ATTR" PARM_VALUE="hash_key"/>
+#!     <XFORM_PARM PARM_NAME="CRC_TYPE" PARM_VALUE="ALL_ATTRS_ENCODED"/>
+#!     <XFORM_PARM PARM_NAME="FILE_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="OAN_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CRCCalculator_3"/>
+#!     <XFORM_PARM PARM_NAME="ALG_CHOICES" PARM_IS_LOOKUP="true" PARM_VALUE="MD5"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="30"
+#!   TYPE="DuplicateFilter"
+#!   VERSION="6"
+#!   POSITION="5478.7463415355496 146.49928370317963"
+#!   BOUNDING_RECT="5478.7463415355496 146.49928370317963 436 65"
+#!   ORDER="500000000000317.13"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="25220"
+#! >
+#!     <OUTPUT_FEAT NAME="UNIQUE"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="aanvraagnummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="boekjaar" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budget_boekjaren" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetbedrag" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="budgetnaam" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="doelstelling" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="naam_wbs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="nummer_wbs" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="sharepoint_nummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vastgesteld" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="vergadering_dossier_nummer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="verleend" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="hash_key" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="DUPLICATE"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="aanvraagnummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="boekjaar" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="budget_boekjaren" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="budgetbedrag" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="budgetid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="budgetnaam" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="doelstelling" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="naam_wbs" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="nummer_wbs" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="sharepoint_nummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="vastgesteld" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="vergadering_dossier_nummer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="verleend" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="hash_key" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="INPUT_ORDERED_CHOICE_LOOKUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="KEYATTR" PARM_VALUE="hash_key"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PRESERVE_FEATURE_ORDER" PARM_VALUE="PER_OUTPUT_PORT"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DuplicateFilter_2"/>
+#!     <XFORM_PARM PARM_NAME="INPUT_ORDERED_CHOICE" PARM_IS_LOOKUP="true" PARM_VALUE="No"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="34"
+#!   SOURCE_NODE="26"
+#!   TARGET_NODE="25"
+#!   SOURCE_PORT_DESC="fo 0 Load_CSV_Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="51"
+#!   SOURCE_NODE="25"
+#!   TARGET_NODE="27"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 lowercase_attributes_Input"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="52"
+#!   SOURCE_NODE="27"
+#!   TARGET_NODE="28"
+#!   SOURCE_PORT_DESC="fo 0 only_retain_letters_number_underscores_Output"
+#!   TARGET_PORT_DESC="fi 0 StringReplacer_verwijder_tekens_Input"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="53"
+#!   SOURCE_NODE="28"
+#!   TARGET_NODE="29"
+#!   SOURCE_PORT_DESC="fo 0 ConvertFloatColumns_output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="54"
+#!   SOURCE_NODE="29"
+#!   TARGET_NODE="30"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="55"
+#!   SOURCE_NODE="30"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 0 UNIQUE"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.050980392156862744,0.050980392156862744,0.047058823529411764,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 313
+ARCGIS_COMPATIBILITY ARCGIS_AUTO
+GUI IGNORE DestDataset_MSSQL_AZURE_4,MSSQL_AZURE_OUT_FME_CONNECTION_GROUP_MSSQL_AZURE_4,MSSQL_AZURE_OUT_COMMAND_TIMEOUT_MSSQL_AZURE_4,MSSQL_AZURE_OUT_ADVANCED_MSSQL_AZURE_4,MSSQL_AZURE_OUT_BULK_INSERT_MSSQL_AZURE_4,MSSQL_AZURE_OUT_START_TRANSACTION_MSSQL_AZURE_4,MSSQL_AZURE_OUT_TRANSACTION_INTERVAL_MSSQL_AZURE_4,MSSQL_AZURE_OUT_BEGIN_SQL{0}_MSSQL_AZURE_4,MSSQL_AZURE_OUT_END_SQL{0}_MSSQL_AZURE_4
+# ============================================================================
+DEFAULT_MACRO _meta_privacy geen_persoonsgegevens
+
+DEFAULT_MACRO _Azure_Container raw
+
+DEFAULT_MACRO _Azure_Folder staging/Susy/
+
+DEFAULT_MACRO DestDataset_MSSQL_AZURE_5 Microsoft<space>Azure<space>SQL<space>server<space>df
+
+# ============================================================================
+INCLUDE [ if {{$(_meta_privacy$encode)} == {}} { puts_real {Parameter '_meta_privacy' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(_Azure_Container$encode)} == {}} { puts_real {Parameter '_Azure_Container' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(_Azure_Folder$encode)} == {}} { puts_real {Parameter '_Azure_Folder' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_MSSQL_AZURE_5$encode)} == {}} { puts_real {Parameter 'DestDataset_MSSQL_AZURE_5' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+WRITER_TYPE MULTI_WRITER
+WRITER_KEYWORD PRIMARY_DEST
+PRIMARY_DEST_DATASET_ORDER BY_ID
+PRIMARY_DEST_FIRST_WRITER_ID 0
+PRIMARY_DEST_TYPE{0} MSSQL_AZURE
+PRIMARY_DEST_KEYWORD{0} MSSQL_AZURE_4
+PRIMARY_DEST_GEN_DIRECTIVES{0} ADD_WRITER_NEXT_ACTION,automatic,CASE_CONTROL_ATTR_NAMES,none,END_SQL<opencurly>0<closecurly>,,COMMAND_TIMEOUT,30,ADVANCED,,START_TRANSACTION,0,TRANSACTION_INTERVAL,500,COORDINATE_SYSTEM_GRANULARITY,FEATURE,BEGIN_SQL<opencurly>0<closecurly>,,CASE_CONTROL_FT_NAMES,none,NAMED_CONNECTION,Microsoft<lt>space<gt>Azure<lt>space<gt>SQL<lt>space<gt>server<lt>space<gt>df,BULK_INSERT,YES
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "MSSQL_AZURE_4"
+#! END_WB_HEADER
+#! START_DEST_HEADER MSSQL_AZURE MSSQL_AZURE_4
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_MSSQL_AZURE_4 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER MSSQL_AZURE MSSQL_AZURE_4
+DEFAULT_MACRO DestDataset_MSSQL_AZURE_4 $(DestDataset_MSSQL_AZURE_5)
+GUI NAMED_DB_CONNECTION_ENCODED DestDataset_MSSQL_AZURE_4 FMT:MSSQL_AZURE Connection:
+DEFAULT_MACRO MSSQL_AZURE_OUT_FME_CONNECTION_GROUP_MSSQL_AZURE_4 
+GUI OPTIONAL DISCLOSUREGROUP MSSQL_AZURE_OUT_FME_CONNECTION_GROUP_MSSQL_AZURE_4 MSSQL_AZURE_OUT_NAMED_CONNECTION%MSSQL_AZURE_OUT_COMMAND_TIMEOUT_MSSQL_AZURE_4 Database Connection
+# ============================================================================
+# Command time out. Indicates in seconds, how long to wait for a command
+# (sqlquery) to execute before terminating the attempt and generating an error.
+DEFAULT_MACRO MSSQL_AZURE_OUT_COMMAND_TIMEOUT_MSSQL_AZURE_4 30
+MSSQL_AZURE_4_COMMAND_TIMEOUT "$(MSSQL_AZURE_OUT_COMMAND_TIMEOUT_MSSQL_AZURE_4)"
+GUI OPTIONAL INTEGER MSSQL_AZURE_OUT_COMMAND_TIMEOUT_MSSQL_AZURE_4 Command Timeout (Seconds)
+DEFAULT_MACRO MSSQL_AZURE_OUT_ADVANCED_MSSQL_AZURE_4 
+GUI OPTIONAL DISCLOSUREGROUP MSSQL_AZURE_OUT_ADVANCED_MSSQL_AZURE_4 MSSQL_AZURE_OUT_BULK_INSERT_MSSQL_AZURE_4%MSSQL_AZURE_OUT_START_TRANSACTION_MSSQL_AZURE_4%MSSQL_AZURE_OUT_TRANSACTION_INTERVAL_MSSQL_AZURE_4%MSSQL_AZURE_OUT_BEGIN_SQL{0}_MSSQL_AZURE_4%MSSQL_AZURE_OUT_END_SQL{0}_MSSQL_AZURE_4 Advanced
+# ============================================================================
+# This keyword determines whether we insert in bulk insert mode or not
+DEFAULT_MACRO MSSQL_AZURE_OUT_BULK_INSERT_MSSQL_AZURE_4 YES
+MSSQL_AZURE_4_BULK_INSERT "$(MSSQL_AZURE_OUT_BULK_INSERT_MSSQL_AZURE_4)"
+GUI CHOICE MSSQL_AZURE_OUT_BULK_INSERT_MSSQL_AZURE_4 YES%NO Bulk Insert
+# ============================================================================
+# This keyword sets the starting transaction
+DEFAULT_MACRO MSSQL_AZURE_OUT_START_TRANSACTION_MSSQL_AZURE_4 0
+MSSQL_AZURE_4_START_TRANSACTION "$(MSSQL_AZURE_OUT_START_TRANSACTION_MSSQL_AZURE_4)"
+GUI OPTIONAL TEXT MSSQL_AZURE_OUT_START_TRANSACTION_MSSQL_AZURE_4 Start Transaction At:
+# ============================================================================
+# This keyword sets the number of features between transaction commits
+DEFAULT_MACRO MSSQL_AZURE_OUT_TRANSACTION_INTERVAL_MSSQL_AZURE_4 500
+MSSQL_AZURE_4_TRANSACTION_INTERVAL "$(MSSQL_AZURE_OUT_TRANSACTION_INTERVAL_MSSQL_AZURE_4)"
+GUI OPTIONAL TEXT MSSQL_AZURE_OUT_TRANSACTION_INTERVAL_MSSQL_AZURE_4 Features Per Transaction
+# ============================================================================
+# The following specifies an SQL command to execute before opening the first
+# table.
+DEFAULT_MACRO MSSQL_AZURE_OUT_BEGIN_SQL{0}_MSSQL_AZURE_4 
+MSSQL_AZURE_4_BEGIN_SQL{0} "$(MSSQL_AZURE_OUT_BEGIN_SQL{0}_MSSQL_AZURE_4)"
+GUI OPTIONAL TEXT_EDIT_SQL_CFG MSSQL_AZURE_OUT_BEGIN_SQL{0}_MSSQL_AZURE_4 MODE,SQL;FORMAT,MSSQL_AZURE SQL To Run Before Write
+# ============================================================================
+# The following specifies an SQL command to execute after closing all the
+# tables.
+DEFAULT_MACRO MSSQL_AZURE_OUT_END_SQL{0}_MSSQL_AZURE_4 
+MSSQL_AZURE_4_END_SQL{0} "$(MSSQL_AZURE_OUT_END_SQL{0}_MSSQL_AZURE_4)"
+GUI OPTIONAL TEXT_EDIT_SQL_CFG MSSQL_AZURE_OUT_END_SQL{0}_MSSQL_AZURE_4 MODE,SQL;FORMAT,MSSQL_AZURE SQL To Run After Write
+DEFAULT_MACRO MSSQL_AZURE_OUT_COORDINATE_SYSTEM_GRANULARITY_MSSQL_AZURE_4 FEATURE
+MSSQL_AZURE_4_COORDINATE_SYSTEM_GRANULARITY "$(MSSQL_AZURE_OUT_COORDINATE_SYSTEM_GRANULARITY_MSSQL_AZURE_4)"
+# ============================================================================
+MSSQL_AZURE_4_GENERATE_FME_BUILD_NUM 25220
+MSSQL_AZURE_4_DATASET "$(DestDataset_MSSQL_AZURE_4)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)$(WORKSPACE_NAME).log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+FME_NAMES_ENCODING UTF-8
+FME_BULK_MODE_THRESHOLD 2000
+LAST_SAVE_BUILD "FME 2025.0.1.0 (20250327 - Build 25220 - WIN64)"
+DEFAULT_MACRO DATASET_KEYWORD_MSSQL_AZURE_4 MSSQL_AZURE_4
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO FME_VIEWER_APP fmedatainspector
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+MACRO load_csv_from_blob_WORKSPACE_NAME Load_csv_file_budget_2
+MACRO $(load_csv_from_blob_WORKSPACE_NAME)_TRANSFORMER_GROUP 
+MACRO $(load_csv_from_blob_WORKSPACE_NAME)_XFORMER_NAME Load_csv_file_budget_2
+MACRO $(load_csv_from_blob_WORKSPACE_NAME)___COMPOUND_PARAMETERS 
+MACRO $(load_csv_from_blob_WORKSPACE_NAME)__FME_AZURE_CONTAINER $(_Azure_Container$encode)
+MACRO $(load_csv_from_blob_WORKSPACE_NAME)__FME_Azure_Folder $(_Azure_Folder$encode)
+MACRO $(load_csv_from_blob_WORKSPACE_NAME)__Filename budgetAssign.csv
+INCLUDE_CUSTOM_TRANSFORMER_VER load_csv_from_blob:2
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Load_csv_file_budget_2 Load_CSV_Output Output Renamer/Nuker"   INPUT FEATURE_TYPE Load_csv_file_budget_2_Load_CSV_Output   OUTPUT FEATURE_TYPE Load_csv_file_budget_2_Load_CSV_Output
+FACTORY_DEF * BranchingFactory   FACTORY_NAME "Load_csv_file_budget_2_Load_CSV_Output Brancher -1 34"   INPUT FEATURE_TYPE Load_csv_file_budget_2_Load_CSV_Output   TARGET_FACTORY "$(WB_CURRENT_CONTEXT)_CREATOR_BRANCH_TARGET"   MAXIMUM_COUNT None   OUTPUT PASSED FEATURE_TYPE *
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(WB_CURRENT_CONTEXT)_CREATOR_BRANCH_TARGET"   INPUT FEATURE_TYPE *  OUTPUT FEATURE_TYPE *
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} TeeFactory    FACTORY_NAME { AttributeExposer_3 }    INPUT  FEATURE_TYPE Load_csv_file_budget_2_Load_CSV_Output    OUTPUT { FEATURE_TYPE AttributeExposer_3_OUTPUT          }
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Clean_column_names_4 lowercase_attributes_Input Input Collector"   INPUT FEATURE_TYPE AttributeExposer_3_OUTPUT   OUTPUT FEATURE_TYPE Clean_column_names_4_lowercase_attributes_Input
+MACRO clean_column_names_WORKSPACE_NAME Clean_column_names_4
+MACRO $(clean_column_names_WORKSPACE_NAME)_TRANSFORMER_GROUP 
+MACRO $(clean_column_names_WORKSPACE_NAME)_XFORMER_NAME Clean_column_names_4
+INCLUDE_CUSTOM_TRANSFORMER_VER clean_column_names:2
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Clean_column_names_4 only_retain_letters_number_underscores_Output Output Renamer/Nuker"   INPUT FEATURE_TYPE Clean_column_names_4_only_retain_letters_number_underscores_Output   OUTPUT FEATURE_TYPE Clean_column_names_4_only_retain_letters_number_underscores_Output
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Convert_float_columns_3 StringReplacer_verwijder_tekens_Input Input Collector"   INPUT FEATURE_TYPE Clean_column_names_4_only_retain_letters_number_underscores_Output   OUTPUT FEATURE_TYPE Convert_float_columns_3_StringReplacer_verwijder_tekens_Input
+MACRO convert_float_columns_WORKSPACE_NAME Convert_float_columns_3
+MACRO $(convert_float_columns_WORKSPACE_NAME)_TRANSFORMER_GROUP 
+MACRO $(convert_float_columns_WORKSPACE_NAME)_XFORMER_NAME Convert_float_columns_3
+MACRO $(convert_float_columns_WORKSPACE_NAME)___COMPOUND_PARAMETERS 
+MACRO $(convert_float_columns_WORKSPACE_NAME)__FLOAT_COLUMNS budgetbedrag
+INCLUDE_CUSTOM_TRANSFORMER_VER convert_float_columns:2
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Convert_float_columns_3 ConvertFloatColumns_output Output Renamer/Nuker"   INPUT FEATURE_TYPE Convert_float_columns_3_ConvertFloatColumns_output   OUTPUT FEATURE_TYPE Convert_float_columns_3_ConvertFloatColumns_output
+# -------------------------------------------------------------------------
+INCLUDE [ if {{ALL_ATTRS_ENCODED} == {FILE} } {               puts {MACRO CRCCalculator_3_Function @CRC(REJECTABLE,ALL_ATTRS_ENCODED,MD5,"<Unused>")};           } elseif {{ALL_ATTRS_ENCODED} == {GEOM_ALLATTRS_ENCODED}} {               puts {MACRO CRCCalculator_3_Function @CRC(REJECTABLE,ALL,MD5)};           } elseif {{ALL_ATTRS_ENCODED} == {ALL_ATTRS_ENCODED}} {               puts {MACRO CRCCalculator_3_Function @CRC(REJECTABLE,ATTRIBUTES_ENCODED,MD5)};           } else  {               set str [string map {" " ","} {<Unused>}];               set newStr {MACRO CRCCalculator_3_Function @CRC(REJECTABLE,ALL_ATTRS_ENCODED,MD5,};               append newStr $str  {)};               puts $newStr;           };         ]
+FACTORY_DEF {*} ExecuteFunctionFactory    FACTORY_NAME { CRCCalculator_3_Executor }    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE Convert_float_columns_3_ConvertFloatColumns_output    FUNCTION_DEFINITION { $(CRCCalculator_3_Function) }    RESULT_ATTRIBUTE { "hash_key" }    OUTPUT { COMPLETE FEATURE_TYPE CRCCalculator_3_OUTPUT        }
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} DuplicateRemoverFactory    FACTORY_NAME { DuplicateFilter_2 }    COMMAND_PARM_EVALUATION SINGLE_PASS    SUPPORTS_FEATURE_TABLES    INPUT  FEATURE_TYPE CRCCalculator_3_OUTPUT    KEY_ATTRIBUTES { hash_key }    INPUT_IS_ORDERED { NO }    PRESERVE_FEATURE_ORDER { PER_OUTPUT_PORT }    OUTPUT { UNIQUE FEATURE_TYPE DuplicateFilter_2_UNIQUE         }
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC DuplicateFilter_2_UNIQUE TO MSSQL_AZURE __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>int.budgetassign<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+MSSQL_AZURE_4_DEF int.budgetassign   mssql_update_key_columns     ""   mssql_drop_table             ""   mssql_truncate_table         ""   mssql_table_writer_mode      ""   fme_feature_operation        INSERT   fme_table_handling           DROP_CREATE   mssql_enable_identity_insert NO   aanvraagnummer               varchar(9)   boekjaar                     varchar(200)   budget_boekjaren             varchar(11)   budgetbedrag                 varchar(13)   budgetid                     varchar(24)   budgetnaam                   varchar(277)   doelstelling                 varchar(25)   naam_wbs                     varchar(200)   nummer_wbs                   varchar(200)   sharepoint_nummer            varchar(12)   vastgesteld                  varchar(12)   vergadering_dossier_nummer   varchar(200)   verleend                     varchar(13)   hash_key                     char(16),PrimaryKey
